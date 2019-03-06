@@ -4,6 +4,8 @@ import edgar
 import pandas as pd
 import requests
 import re
+import matplotlib.pyplot as plt
+
 
 ## Download the index file that consists list of companies with url to download the filings for a given year to the index_files folder
 ## Downloaded in tsv format
