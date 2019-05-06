@@ -3,9 +3,9 @@ library(edgarWebR)
 library(readxl)
 library(lubridate)
 
-
+setwd("/Users/bhumikakhandelwal/Documents/Documents/Documents/Academics/Capstone/ProjectWork/Capstone_NLP_DIWD/SEC_Output_Files")
 ## Read the csv file with all listings
-Edgar_10KQ <- read.csv('./index_files/EDGAR_10K_10Q.csv')
+Edgar_10KQ <- read.csv('./EDGAR_10K_10Q.csv')
 
 
 ## Rename the column headers
@@ -18,7 +18,7 @@ Edgar_10KQ <- transform(Edgar_10KQ, HTMLURL = paste0(sec_URL, HTMLURL))
 
 ##Get the year and quarter details
 Edgar_10KQ$Year <- substr(toString(Edgar_10KQ$DateFiled), 1, 4)
-Edgar_10KQ$Quarter <- quarter(toString(Edgar_10KQ$DateFiled), with_year = FALSE)
+Edgar_10KQ$Quarter <- quarter(as.character(Edgar_10KQ$DateFiled), with_year = FALSE)
 
 ##Split filings to 10-K and 10-Q
 Edgar_10K <- Edgar_10KQ[which(Edgar_10KQ$TypeOfFiling == '10-K'),]
@@ -26,10 +26,10 @@ Edgar_10Q <- Edgar_10KQ[which(Edgar_10KQ$TypeOfFiling == '10-Q'),]
 
 
 #For development purpose
-a <- head(Edgar_10K)
+a <- head(Edgar_10K,5000)
 Edgar_10K <- a
 
-b <- head(Edgar_10Q)
+b <- head(Edgar_10Q,5000)
 Edgar_10Q <- b
 
 
@@ -108,8 +108,8 @@ parsedDF10Q <- parse10Qfilings(output10Q, columnNames10Q)
 
 
 ## Write the dataframes as csv files
-write.csv(parsedDF10K, "./ParsedText/parsedText10K.csv", row.names = FALSE)
-write.csv(parsedDF10Q, "./ParsedText/parsedText10Q.csv", row.names = FALSE)
+write.csv(parsedDF10K, "./parsed_files/parsedText10K.csv", row.names = FALSE)
+write.csv(parsedDF10Q, "./parsed_files/parsedText10Q.csv", row.names = FALSE)
 
 
 
