@@ -1,5 +1,6 @@
-This folder contains all the code, intermediate and final output data files related to SEC Filings
-. The content of each folder is mentioned below:
+# This folder contains all the code, intermediate and final output data files related to SEC Filings
+
+## The content of each folder is mentioned below:
 
 **index_files:** It contains the list of .tsv files that are downloaded from the SEC.gov website using EDGAR library. These are the initial files that gets downloaded and it has the list of companies with its corresponding urls to download the 10-K and 10-Q filings. These files are named based on the year and quarter that it belongs to.
 
