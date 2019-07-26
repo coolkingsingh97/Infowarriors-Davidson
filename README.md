@@ -13,6 +13,6 @@ Our project is divided into 5 phases which includes:
 These phases were carried out separately for Call Transcripts and the SEC Filings data.
 The details of the code base and output files are in the respective folders in the following file paths:
 - Call Transcripts: ![https://github.com/jayashreeraman/Capstone_NLP_DIWD/tree/master/CallTranscripts/Transcripts_README.md]
-- SEC Filings: 
+- SEC Filings: ![https://github.com/jayashreeraman/Capstone_NLP_DIWD/tree/master/SEC_Fillings/Readme.md]
 
 
