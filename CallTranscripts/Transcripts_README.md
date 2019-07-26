@@ -6,10 +6,15 @@
 
 **Codebase:** It consists of all the code required to download, parse and process the data. The description of each file is mentioned and listed in the order of execution.
 
-- Download_IndexFiles: Needs to be executed first to download the .tsv files to the 'index_files' folder and save the filtered 10-K/10-Q listings to the '10KQ_files' folder. 
-- SECItemwise_Parsing_Code: Reads data from the '10KQ_files' folder, parses the data and saves the output file in the folder 'parsed_files'
-- Text-Preprocessing_10K: Pre-processes the text and computes the metrics for 10-K files. Reads data from 'parsed_files' folder and save the output to 'final_output_files' folder. 
-- Text-Preprocessing_10Q: Pre-processes the text and computes the metrics for 10-Q files. Reads data from 'parsed_files' folder and save the output to 'final_output_files' folder. 
+- 1_CallTranscripts_DataFrame.ipynb : This notebook 
+
+- 2_CreateSentimentDataFrame_CallTranscripts.ipynb : 
+
+- 3_SaveTranscriptsFromSeekingAlpha.ipynb: The code in this notebook retrieves the call transcripts from the SeekingAlpha website and saves it to text files, that are all saved in the Call_Transcripts_Seeking_Alpha folder. The filename has a format as follows - *CT_companyName_year_quarter*  
+
+- 4_CallTranscripts_Preprocessing.ipynb: This notebook does the bulk of the text preprocessing: namely, stemming, lemmatization, calculation of positive and negative words, calculation of positive and negative indexes and computation of the Gunning Fogg Index. The output is an excel that combines the computed metrics with the S&P excel fields, so they can all be imported into Tableau for data visualization.
+
+- SentimentAnalysis_CallTranscripts.ipynb:
 	
 
 **Call_Transcripts_Seeking_Alpha** :
