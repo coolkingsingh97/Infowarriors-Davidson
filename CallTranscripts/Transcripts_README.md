@@ -6,13 +6,13 @@
 
 **Codebase:** It consists of all the code required to download, parse and process the data. The description of each file is mentioned and listed in the order of execution.
 
-- 1_CallTranscripts_DataFrame.ipynb : This notebook 
+- 1_CallTranscripts_DataFrame.ipynb : This notebook creates a data frame with a CallTranscriptID, and all the contents of the transcript in a column, and saves it to an excel file. 
 
-- 2_CreateSentimentDataFrame_CallTranscripts.ipynb : 
+- 2_CreateSentimentDataFrame_CallTranscripts.ipynb : This notebook does the bulk of the text preprocessing: namely, stemming, lemmatization, calculation of positive and negative words, calculation of positive and negative indexes and computation of the Gunning Fogg Index and creates an intermediate data frame with the positive and negative word counts, and positive and negative indexes for the entire transcript. The output is an excel that combines the computed metrics with the S&P excel fields, so they can all be imported into Tableau for data visualization.
 
 - 3_SaveTranscriptsFromSeekingAlpha.ipynb: The code in this notebook retrieves the call transcripts from the SeekingAlpha website and saves it to text files, that are all saved in the Call_Transcripts_Seeking_Alpha folder. The filename has a format as follows - *CT_companyName_year_quarter*  
 
-- 4_CallTranscripts_Preprocessing.ipynb: This notebook does the bulk of the text preprocessing: namely, stemming, lemmatization, calculation of positive and negative words, calculation of positive and negative indexes and computation of the Gunning Fogg Index. The output is an excel that combines the computed metrics with the S&P excel fields, so they can all be imported into Tableau for data visualization.
+- 4_CallTranscripts_Preprocessing.ipynb: This notebook does the bulk of the text preprocessing: namely, stemming, lemmatization, calculation of positive and negative words, calculation of positive and negative indexes and computation of the Gunning Fogg Index, BUT does it post an Analyst and Executive breakdown of the transcript. The output is an excel that combines the computed metrics with the S&P excel fields, so they can all be imported into Tableau for data visualization.
 
 - SentimentAnalysis_CallTranscripts.ipynb:
 	
